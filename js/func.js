@@ -29,7 +29,7 @@ $(document).ready(function(e) {
 			confirm('que desea hacer?');
 	});
 */
-	document.addEventListener("devideready",function(){
+	document.addEventListener("deviceready",function(){
 		$('.btn').tap(function(){
 			var boton = (($(this).attr('class')).split(' '))[1];
 			switch(boton){
