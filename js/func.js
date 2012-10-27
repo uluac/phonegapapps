@@ -52,20 +52,19 @@ $(document).ready(function(e) {
 			}
 		});
 		$('#right').swiperight(function(){
-                        showalert();
+			showAlert();		});
+			$('#left').swipeleft(function(){
+				navigator.notification.confirm('¿Qué desea hacer?',function(boton){
+				switch(boton){
+					case 1:
+						navigator.notification.beep(1);
+						break;
+					case 2:
+					navigator.notification.vibrate(500);
+					break;
+				}
+			},"Práctica 1","Beep,Vibrar,Cancelar");
 		});
-	$('#left').swipeleft(function(){
-		navigator.notification.confirm("que desea hacer?",function(boton) { 
-		switch(boton){
-			case 1:
-				navigator.notification.beep(1);
-				break;
-			case 2:
-				navigator.notification.vibrate(500);
-				break;
-		}
-	},"practica 1","beep, vibrar, cancelar");
-	});
 
 // sonido de pc
 //	navigator.notification.beep(1);
