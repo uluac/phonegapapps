@@ -51,16 +51,16 @@ $(document).ready(function(e) {
 					break;
 			}
 		});
-		$('right').swiperight(function(){
-			navigator.notification.alert("desliza a la derecha",function() { },"practica 1","Aceptar");
+		$('#right').swiperight(function(){
+                        showalert();
 		});
-	$('#alert left').swipeleft(function(){
+	$('#left').swipeleft(function(){
 		navigator.notification.confirm("que desea hacer?",function(boton) { 
 		switch(boton){
-			case '0':
+			case 1:
 				navigator.notification.beep(1);
 				break;
-			case '1':
+			case 2:
 				navigator.notification.vibrate(500);
 				break;
 		}
